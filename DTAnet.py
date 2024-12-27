@@ -246,9 +246,9 @@ class PSAD_net(nn.Module):
         #print(outputs.size())
         return outputs
 
-class NET(nn.Module):
+class DTAnet(nn.Module):
     def __init__(self, num_channels=1, num_classes=2):
-        super(NET, self).__init__()
+        super(DTAnet, self).__init__()
         num_feat = [16, 32, 64, 128]
         self.msfe = MSFE_net(num_channels,num_feat)
         self.classify = EFC_net()
